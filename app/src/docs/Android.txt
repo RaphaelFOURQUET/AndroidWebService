@@ -1,0 +1,65 @@
+http://www.amonteiro.fr/formation.pdf
+contact@amonteiro.fr
+
+ANDROID	(Sous Android Studio)
+
+SaveAction : definir macro pour plusieurs actions :
+	Tout selectionner : Ctrl A
+	auto indent ctrl I
+	import ctrl maj O
+	reformat code ctrl maj F
+	Save : Ctrl S
+	Echap Echap	(retour à la ligne ou l'on était).
+	
+Puis on definit Ctrl S comme raccourci pour cette macro.
+
+
+Dans les dossiers : - pour préciser lequel utiliser selon config telephone (drawable-hpdi et drawable-ldpi par exemple)
+										values-fr ou values-en pour differents langages par exemple.
+						On se sert ensuite de la classe R pour l'acces.
+						(formation.pdf p70)
+						
+						
+Rajouter une activite.
+	Creer le .java de notre activite.
+	Creer la vue html de notre activite.
+	Ajouter à notre AndroidManifest.xml .
+	
+	
+List par BaseAdapter formation.pdf p127 : optimisation pour afficher liste très longue.
+
+	1 - vue activite.xml
+	2 - vue cellule.xml
+	3 - Eleve.java
+	4 - EleveAdapter.java
+	5 - Main activity.java
+	
+	
+RecycleView : notifyDataInsert().
+
+AsyncTask :	formation.pdf p177-178
+	Class extends AsyncTask (si on veut transmettre des objets, on peut par constructeur).
+	le doInBackground renvoie un Object que l'on recoit dans le onPostExecute(Object object).
+	On peut egalement utiliser els chevrons pour typer cet Object.
+	
+	Utilisation : on cree par new() puis on lance par .execute();
+	TODO : listView affiche liste d eleves : 2eme bouton qui ajoute 10 eleves par AsyncTask ...
+
+	p181 : le deuxieme point a change : Si le «doInBackground» a commencé il finira son exécution.
+	
+WEB :
+	Ne pas oublier de donner le http dans l'URL (le navigateur n'est pas derriere pour le rajouter).
+
+TP p340: creer un site et afficher sa pge HTML
+		Utilisation de webView (loadUrl n'a pas a être mis dans une AsyncTask car deja gere par son code).
+		+Rajouter permission internet dans AndroidManifest.xml
+		
+		! Gerer les poids !
+		
+		EditText Button
+		TextView (avec AsyncTask)
+		WebView
+		
+		
+En+ TP : Rajouter un id sur mon layout de cellule.
+		+un listener sur lui dans Adapter et intercepter click puis supprimer.
